@@ -134,7 +134,7 @@ function Cart() {
                     {
                         payNow && <div className='w-full mt-6 flex items-center justify-center'>
                         <StripeCheckout
-                        stripeKey='sk_test_51PYzTxRpU8xePhxGbOEa3ottA76N75wpUnY13RRBDsYXRXQ6XI9N4B2fGxyzoty95CV4hq85BeTN5qYGdADzc6HT00pOuCt9Fd'
+                        stripeKey='pk_test_51PYzTxRpU8xePhxGxJxalScnLVbcWRt8C5H8D10oPplJa0wQ6ch5wOF68hKmEwzCG0Q7bOgsHfabF1RtWS8YcATV00NhQjlYWz'
                         name='Amazon store clone'
                         amount={totalPrice * 100}
                         label='Pay to Princewill'
