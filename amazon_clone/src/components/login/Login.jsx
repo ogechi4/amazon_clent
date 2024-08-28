@@ -11,6 +11,7 @@ import {
 import { useDispatch } from 'react-redux'
 import { addUser, removeUser } from '../../redux/amazonSlice'
 import { useNavigate } from 'react-router-dom'
+import { GoogleLogin } from '@react-oauth/google'
 
 function Login() {
   const dispatch = useDispatch()
@@ -80,7 +81,16 @@ function Login() {
            rounded-md flex items-center justify-center gap-2 hover:border-blue-600 cursor-pointer
            duration-300'>
                 <img width={50} src={gitHub} alt="gitHubLogo" />
-                <span className='text-sm text-gray-900'>Sign in with Github</span>
+                <span className='text-sm text-gray-900'>
+                  <GoogleLogin
+                    onSuccess={(credentialResponse) =>{
+                      console.log(credentialResponse)
+                    }}
+                    onError={() =>{
+                      console.log("Login Failed")
+                    }} 
+                    />
+                </span>
            </div>
            <button className='bg-black text-white text-base py-3 px-8
            tracking-wide rounded-md hover:bg-gray-800 duration-300'>
